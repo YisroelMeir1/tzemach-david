@@ -5,6 +5,9 @@ on:
     branches: [main]
   workflow_dispatch:
 
+# Site is also published from branch main /docs (Settings → Pages).
+# This workflow rebuilds from source when scripts exist; otherwise uploads docs/.
+
 permissions:
   contents: read
   pages: write
@@ -19,18 +22,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - name: Build site with repo base path
-        env:
-          # Project Pages live at https://<user>.github.io/<repo>/
-          SITE_BASE: /${{ github.event.repository.name }}
-        run: python3 scripts/build_site.py
+
+      - name: Build or use prebuilt docs
+        run: |
+          set -euo pipefail
+          if [ -f scripts/build_site.py ]; then
+            echo "Building site from source…"
+            python3 -m pip install --quiet --upgrade pip || true
+            SITE_BASE="/${{ github.event.repository.name }}" python3 scripts/build_site.py
+            echo "path=site" >> "$GITHUB_ENV"
+          elif [ -d docs ] && [ -f docs/index.html ]; then
+            echo "scripts/build_site.py missing — using prebuilt docs/"
+            echo "path=docs" >> "$GITHUB_ENV"
+          else
+            echo "Neither scripts/build_site.py nor docs/index.html found."
+            ls -la
+            exit 1
+          fi
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: site
+          path: ${{ env.path }}
 
   deploy:
     needs: build
