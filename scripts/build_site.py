@@ -264,8 +264,9 @@ def build_contents(entries: list[dict], eras: list[dict]) -> str:
 
     intro_link = ""
     if any(e.get("type") == "introduction" for e in entries):
-        intro_link = """
-      <a class="card intro-card" href="{u('view/introduction.html')}">
+        intro_href = u("view/introduction.html")
+        intro_link = f"""
+      <a class="card intro-card" href="{intro_href}">
         <span class="eyebrow">הקדמה</span>
         <h3>Author's Preface</h3>
         <p>Why Gans wrote the book, his sources (Seder Olam, Yuchasin, Shalshelet HaKabbalah…), and his method.</p>
