@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Workflow · Tzemach David</title>
+  <meta name="description" content="Tzemach David — English edition of Rabbi David Gans's chronicle" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Frank+Ruhl+Libre:wght@400;500;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+  
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/index.html">
+        <span class="brand-he" lang="he" dir="rtl">צמח דוד</span>
+        <span class="brand-en">Tzemach David</span>
+      </a>
+      <nav class="nav">
+      <a href="/index.html">Home</a>
+      <a href="/contents.html">Contents</a>
+      <a href="/read.html">Read</a>
+      <a href="/about.html">About</a>
+      <a href="/workflow.html" class="active">Workflow</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+
+    <section class="page-head">
+      <div class="section-inner narrow">
+        <p class="eyebrow">Full-book workflow</p>
+        <h1>How the factory works</h1>
+        <p class="lede">One-off translation is a chat paste. This project is the full pipeline: source → OCR → segment → translate → site.</p>
+
+        <ol class="workflow-steps">
+          <li>
+            <h3>1. Acquire source</h3>
+            <p>Download page images from HebrewBooks (public-domain scans). Script: <code>scripts/download_pages.py</code>.</p>
+          </li>
+          <li>
+            <h3>2. OCR Hebrew</h3>
+            <p>Render PDFs and run Tesseract with a Hebrew model. Script: <code>scripts/ocr_pages.py</code>. Output lands in <code>data/raw/ocr/</code>.</p>
+          </li>
+          <li>
+            <h3>3. Segment by year</h3>
+            <p>Split continuous OCR into almanac entries keyed by Anno Mundi year. Script: <code>scripts/segment_years.py</code> (starter heuristics; human cleanup expected).</p>
+          </li>
+          <li>
+            <h3>4. Translate</h3>
+            <p>Fill <code>english</code> on each JSON entry (manually, via API, or in chat). Always keep <code>hebrew</code> and set <code>status</code> to <code>machine</code> until reviewed.</p>
+          </li>
+          <li>
+            <h3>5. Build the site</h3>
+            <p>Run <code>python3 scripts/build_site.py</code>. Static HTML is written to <code>site/</code>.</p>
+          </li>
+          <li>
+            <h3>6. Review</h3>
+            <p>Flip <code>status</code> from <code>machine</code> → <code>reviewed</code> entry by entry. Rebuild to update badges.</p>
+          </li>
+        </ol>
+
+        <h3>One-off vs full-book (recap)</h3>
+        <table class="simple-table">
+          <thead><tr><th></th><th>One-off</th><th>Full-book workflow</th></tr></thead>
+          <tbody>
+            <tr><td>Output</td><td>A passage of English</td><td>Structured corpus + website</td></tr>
+            <tr><td>Scope</td><td>One year / page</td><td>Whole sefer (or a full part)</td></tr>
+            <tr><td>Reuse</td><td>Copy-paste</td><td>JSON the site reads</td></tr>
+            <tr><td>This repo</td><td>Pilot entries in <code>data/entries/</code></td><td>Scripts + rebuild loop</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Quick start</h3>
+        <pre class="code-block">cd tzemach-david
+python3 scripts/build_site.py
+cd site && python3 -m http.server 8080
+# open http://localhost:8080</pre>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p><strong>Tzemach David</strong> · Rabbi David Gans (1541–1613) · Prague 1592</p>
+      <p class="muted">Independent English machine translation from public-domain Hebrew. Not a scholarly critical edition — check the original for any passage of consequence.</p>
+    </div>
+  </footer>
+</body>
+</html>

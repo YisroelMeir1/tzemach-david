@@ -1,0 +1,170 @@
+{
+  "book": {
+    "title_en": "Tzemach David",
+    "title_he": "צמח דוד",
+    "author": "Rabbi David Gans"
+  },
+  "years": [
+    1,
+    130,
+    235,
+    325,
+    395,
+    460,
+    622,
+    687,
+    874,
+    930,
+    1056,
+    1656,
+    1948,
+    2048,
+    2448
+  ],
+  "entries": [
+    {
+      "id": "introduction",
+      "type": "introduction",
+      "year": null,
+      "title_en": "Author's Preface",
+      "title_he": "הקדמה",
+      "status": "machine",
+      "era": null
+    },
+    {
+      "id": "year-0001",
+      "type": "almanac",
+      "year": 1,
+      "title_en": "The First Year of Creation",
+      "title_he": "שנה הראשונה של היצירה",
+      "status": "machine",
+      "era": "creation"
+    },
+    {
+      "id": "year-0130",
+      "type": "almanac",
+      "year": 130,
+      "title_en": "Seth",
+      "title_he": "שת",
+      "status": "machine",
+      "era": "creation"
+    },
+    {
+      "id": "year-0235",
+      "type": "almanac",
+      "year": 235,
+      "title_en": "Enosh",
+      "title_he": "אנוש",
+      "status": "machine",
+      "era": "creation"
+    },
+    {
+      "id": "year-0325",
+      "type": "almanac",
+      "year": 325,
+      "title_en": "Kenan",
+      "title_he": "קינן",
+      "status": "machine",
+      "era": "creation"
+    },
+    {
+      "id": "year-0395",
+      "type": "almanac",
+      "year": 395,
+      "title_en": "Mahalalel",
+      "title_he": "מהללאל",
+      "status": "machine",
+      "era": "creation"
+    },
+    {
+      "id": "year-0460",
+      "type": "almanac",
+      "year": 460,
+      "title_en": "Jared",
+      "title_he": "ירד",
+      "status": "machine",
+      "era": "creation"
+    },
+    {
+      "id": "year-0622",
+      "type": "almanac",
+      "year": 622,
+      "title_en": "Enoch",
+      "title_he": "חנוך",
+      "status": "machine",
+      "era": "creation"
+    },
+    {
+      "id": "year-0687",
+      "type": "almanac",
+      "year": 687,
+      "title_en": "Methuselah",
+      "title_he": "מתושלח",
+      "status": "machine",
+      "era": "creation"
+    },
+    {
+      "id": "year-0874",
+      "type": "almanac",
+      "year": 874,
+      "title_en": "Lamech",
+      "title_he": "למך",
+      "status": "machine",
+      "era": "creation"
+    },
+    {
+      "id": "year-0930",
+      "type": "almanac",
+      "year": 930,
+      "title_en": "Death of Adam",
+      "title_he": "פטירת אדם הראשון",
+      "status": "machine",
+      "era": "creation"
+    },
+    {
+      "id": "year-1056",
+      "type": "almanac",
+      "year": 1056,
+      "title_en": "Noah",
+      "title_he": "נח",
+      "status": "machine",
+      "era": "antediluvian"
+    },
+    {
+      "id": "year-1656",
+      "type": "almanac",
+      "year": 1656,
+      "title_en": "The Flood",
+      "title_he": "המבול",
+      "status": "machine",
+      "era": "antediluvian"
+    },
+    {
+      "id": "year-1948",
+      "type": "almanac",
+      "year": 1948,
+      "title_en": "Abram",
+      "title_he": "אברם",
+      "status": "machine",
+      "era": "noah-abraham"
+    },
+    {
+      "id": "year-2048",
+      "type": "almanac",
+      "year": 2048,
+      "title_en": "Isaac",
+      "title_he": "יצחק",
+      "status": "machine",
+      "era": "patriarchs"
+    },
+    {
+      "id": "year-2448",
+      "type": "almanac",
+      "year": 2448,
+      "title_en": "The Exodus from Egypt",
+      "title_he": "יציאת מצרים",
+      "status": "machine",
+      "era": "egypt"
+    }
+  ]
+}

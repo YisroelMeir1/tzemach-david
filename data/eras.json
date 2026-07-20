@@ -1,0 +1,106 @@
+[
+  {
+    "id": "creation",
+    "title_en": "Creation to Adam's Passing",
+    "title_he": "בריאה עד פטירת אדם",
+    "year_start": 1,
+    "year_end": 930,
+    "part": "part1"
+  },
+  {
+    "id": "antediluvian",
+    "title_en": "Before the Flood",
+    "title_he": "לפני המבול",
+    "year_start": 974,
+    "year_end": 1656,
+    "part": "part1"
+  },
+  {
+    "id": "noah-abraham",
+    "title_en": "Noah to Abraham",
+    "title_he": "נח עד אברהם",
+    "year_start": 1657,
+    "year_end": 1948,
+    "part": "part1"
+  },
+  {
+    "id": "patriarchs",
+    "title_en": "The Patriarchs",
+    "title_he": "האבות",
+    "year_start": 1949,
+    "year_end": 2238,
+    "part": "part1"
+  },
+  {
+    "id": "egypt",
+    "title_en": "Egyptian Bondage",
+    "title_he": "גלות מצרים",
+    "year_start": 2239,
+    "year_end": 2448,
+    "part": "part1"
+  },
+  {
+    "id": "wilderness",
+    "title_en": "The Wilderness",
+    "title_he": "במדבר",
+    "year_start": 2449,
+    "year_end": 2488,
+    "part": "part1"
+  },
+  {
+    "id": "judges",
+    "title_en": "Era of Judges",
+    "title_he": "תקופת השופטים",
+    "year_start": 2489,
+    "year_end": 2882,
+    "part": "part1"
+  },
+  {
+    "id": "first-temple",
+    "title_en": "First Temple",
+    "title_he": "בית ראשון",
+    "year_start": 2883,
+    "year_end": 3338,
+    "part": "part1"
+  },
+  {
+    "id": "babylon-exile",
+    "title_en": "Babylonian Exile",
+    "title_he": "גלות בבל",
+    "year_start": 3339,
+    "year_end": 3408,
+    "part": "part1"
+  },
+  {
+    "id": "second-temple",
+    "title_en": "Second Temple",
+    "title_he": "בית שני",
+    "year_start": 3409,
+    "year_end": 3828,
+    "part": "part1"
+  },
+  {
+    "id": "tannaim",
+    "title_en": "Tannaitic Era",
+    "title_he": "תקופת התנאים",
+    "year_start": 3829,
+    "year_end": 3979,
+    "part": "part1"
+  },
+  {
+    "id": "amoraim",
+    "title_en": "Amoraic Era",
+    "title_he": "תקופת האמוראים",
+    "year_start": 3980,
+    "year_end": 4260,
+    "part": "part1"
+  },
+  {
+    "id": "geonim-later",
+    "title_en": "Geonim to Author's Day",
+    "title_he": "גאונים עד דור המחבר",
+    "year_start": 4261,
+    "year_end": 5352,
+    "part": "part1"
+  }
+]

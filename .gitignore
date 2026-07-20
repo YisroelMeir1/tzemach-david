@@ -1,0 +1,22 @@
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Large raw scan artifacts (optional to re-download)
+data/raw/images/
+data/raw/pages/*.pdf
+
+# Keep OCR text (small) — ignore only if huge later
+# data/raw/ocr/
+
+# Local env
+.env
+.token
