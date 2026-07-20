@@ -1,0 +1,43 @@
+{
+  "id": "tzemach-david",
+  "title_he": "צמח דוד",
+  "title_en": "Tzemach David",
+  "title_translit": "Tzemach David",
+  "subtitle_en": "Shoot of David — Order of the Generations",
+  "author": {
+    "name_he": "רבי דוד גנז",
+    "name_en": "Rabbi David Gans",
+    "name_full": "David ben Shlomo Gans",
+    "years": "1541–1613",
+    "place": "Prague"
+  },
+  "first_printed": {
+    "year_am": 5352,
+    "year_ce": 1592,
+    "place": "Prague"
+  },
+  "description_en": "A Hebrew world chronicle in two parts by Rabbi David Gans (student of the Rema and the Maharal of Prague). Part I traces Jewish history year by year from Creation to the author's day. Part II surveys general world history. First printed in Prague in 1592 — the first history book printed in Hebrew.",
+  "parts": [
+    {
+      "id": "part1",
+      "title_he": "חלק ראשון",
+      "title_en": "Part One — Jewish History",
+      "description": "Year-by-year chronicle of Jewish history from Creation through the sages of Gans's generation."
+    },
+    {
+      "id": "part2",
+      "title_he": "חלק שני",
+      "title_en": "Part Two — World History",
+      "description": "General / gentile history arranged by the four kingdoms of Daniel, with a famous preface defending the study of secular history."
+    }
+  ],
+  "source": {
+    "edition": "Warsaw 1878 (תרל״ח) — HebrewBooks #21930",
+    "hebrewbooks_id": 21930,
+    "note": "Public-domain Hebrew text. English on this site is an independent machine translation with human review pending — not derived from other modern English editions."
+  },
+  "stats": {
+    "pilot_entries": 15,
+    "target_scope": "Full Part I chronological almanac, then Part II"
+  }
+}
